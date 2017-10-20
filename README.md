@@ -23,8 +23,8 @@ $ git clone https://github.com/transmute-industries/transmute-dapp.git
 #### functions/.transmute
 
 - Maybe create a project on [firebase.google.com](https://firebase.google.com/)
-- Add/Update `firebase-service-account.json`
-- Add/Update `firebase-client-config.json`
+- Add/Update `firebase-service-account.json` - https://firebase.google.com/docs/admin/setup
+- Add/Update `firebase-client-config.json` - https://firebase.google.com/docs/web/setup
 - Update `environment.secret.env`
 - Update `environment.node` & `environment.web`
 

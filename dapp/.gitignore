@@ -1,0 +1,8 @@
+node_modules
+coverage
+build
+src/contracts
+public/semantic
+sigmate-v3-ti.json
+
+firebase-service-account.json

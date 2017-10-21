@@ -36,12 +36,12 @@ export default class MenuExampleSecondaryPointing extends React.Component {
     return (
       <div className="navbar">
         <Menu pointing secondary>
-          <a href="/">
+          <a href="https://transmute.industries">
             <img src={logo} className="App-logo" alt="logo" />
           </a>
           <Menu.Menu position="right" className="mobile hidden">
             <Menu.Item href="https://transmute.industries" name="Corporate" />
-            <Menu.Item href="https://github.com/transmute-industries" name="Source" />
+            <Menu.Item href="https://github.com/transmute-dapp" name="Source" />
           </Menu.Menu>
         </Menu>
       </div>

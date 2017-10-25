@@ -4,15 +4,11 @@
   "private": true,
   "homepage": "https://dapp.transmute.industries",
   "dependencies": {
-    "@digix/truffle-lightwallet-provider": "^0.1.2",
     "classnames": "^2.2.5",
     "es6-promise": "^4.1.1",
-    "faker": "^4.1.0",
     "history": "^4.6.3",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
-    "material-ui": "^0.18.6",
-    "material-ui-datatables": "^0.18.1",
     "react": "^15.6.1",
     "react-ace": "^5.2.0",
     "react-dom": "^15.6.1",
@@ -21,15 +17,14 @@
     "react-redux": "^5.0.5",
     "react-router-redux": "^5.0.0-alpha.6",
     "react-tap-event-plugin": "^2.0.1",
-    "react-toastify": "^2.1.2",
+    "react-toastify": "2.1.2",
     "redux": "^3.7.1",
     "redux-form": "^7.0.0",
     "redux-form-material-ui": "^4.2.0",
     "redux-thunk": "^2.2.0",
     "semantic-ui-react": "^0.73.0",
     "source-map-support": "^0.4.3",
-    "transmute-framework": "^0.1.50",
-    "uport-connect": "^0.6.4"
+    "transmute-framework": "^0.1.50"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.0",
@@ -89,30 +84,34 @@
   },
   "scripts": {
     "clean": "rm -rf build coverage",
-    "docker:build": "docker build -t transmute/dapp -f Dockerfile .",
-    "docker:start": "docker run -it transmute/dapp",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom --coverage",
-    "test:all": "npm run test && npm run truffle:test",
-    "truffle:test": "truffle test",
     "predeploy": "npm run build",
     "deploy": "firebase deploy --only hosting",
-    "deploy:testnet": "truffle migrate --compile-all --network ropsten --reset --verbose-rpc",
-    "transmute": "node ./node_modules/transmute-framework/build/cli/index.js",
-    "testrpc": "pm2 start testrpc",
-    "report-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "move-contracts": "rm -rf src/contracts && mv build/contracts src/contracts",
-    "migrate": "RPC_HOST=localhost npm run transmute migrate && npm run move-contracts",
-    "ipfs:allow": "ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[\"http://localhost:3000\"]'",
-    "ipfs": "npm run ipfs:allow && ipfs daemon"
+    "report-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "jest": {
     "mapCoverage": true,
-    "collectCoverageFrom": ["**/*.{ts,tsx}", "!**/node_modules/**", "!src/lib/index.d.ts"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
-    "testMatch": ["<rootDir>/src/**/__tests__/**/*.ts?(x)", "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"],
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!src/lib/index.d.ts"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
+    ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
@@ -120,13 +119,17 @@
       "^.+\\.tsx?$": "<rootDir>/config/jest/typescriptTransform.js",
       "^(?!.*\\.(css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

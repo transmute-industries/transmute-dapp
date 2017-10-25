@@ -41,7 +41,7 @@ export default class MenuExampleSecondaryPointing extends React.Component {
           </a>
           <Menu.Menu position="right" className="mobile hidden">
             <Menu.Item href="https://transmute.industries" name="Corporate" />
-            <Menu.Item href="https://github.com/transmute-dapp" name="Source" />
+            <Menu.Item href="https://github.com/transmute-industries/transmute-dapp" name="Source" />
           </Menu.Menu>
         </Menu>
       </div>

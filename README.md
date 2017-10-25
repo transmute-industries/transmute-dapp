@@ -2,16 +2,14 @@
 
 https://dapp.transmute.industries/
 
-This firebase application was built with the Transmute CLI and Framework.
+A Transmute Platform demo app. See branches for advanced configuration.
 
 ## Depenencies
 
 - [Latest Node.js](https://nodejs.org/)
 - [Firebase](https://firebase.google.com)
 
-## Getting Started
-
-### Git & Docker
+### Getting Started
 
 ```
 $ git clone https://github.com/transmute-industries/transmute-dapp.git

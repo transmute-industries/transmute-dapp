@@ -1,6 +1,5 @@
 node_modules
 coverage
 build
-public/semantic
 sigmate-v3-ti.json
 firebase-service-account.json

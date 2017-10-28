@@ -2,7 +2,7 @@
 
 https://dapp.transmute.industries/
 
-This firebase application was built with the Transmute CLI and Framework.
+An advanced configuration of the transmute dapp.
 
 ## Depenencies
 

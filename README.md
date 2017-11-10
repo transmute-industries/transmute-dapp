@@ -1,5 +1,7 @@
 # Transmute dApp
 
+Work in progress.. expect this to be broken often.
+
 https://dapp.transmute.industries/
 
 A Transmute Platform demo app. See branches for advanced configuration.

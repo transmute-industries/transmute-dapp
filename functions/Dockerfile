@@ -1,6 +1,7 @@
 FROM node:latest
 
 RUN npm install -g yarn
+RUN yarn global add transmute-cli@latest
 
 RUN mkdir -p /usr/src/app
 
@@ -9,5 +10,3 @@ WORKDIR /usr/src/app/functions
 RUN yarn install
 
 WORKDIR /usr/src/app
-RUN yarn global add transmute-cli@latest
-

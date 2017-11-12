@@ -22,7 +22,7 @@ export default class ParticleSplash extends React.Component<any, any> {
         <div className="hero-content">
           <h1>
             {' '}
-            Fullstack Ethereum, <span>Simplified</span>.
+            Fullstack Ethereum, <span>Advanced</span>.
           </h1>
           <h2 className="mobile hidden">Easily deploy cloud based ethereum applications.</h2>
           <Button

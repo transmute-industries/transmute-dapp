@@ -1,10 +1,9 @@
 {
-  "name": "transmute-functions",
-  "description": "Cloud Functions for Firebase & Ethereum",
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
   "scripts": {
     "docker:build": "docker build -t transmute/functions -f Dockerfile.serve .",
-    "docker:term": "docker run -it -v ~/.transmute:/usr/src/app/functions/.transmute transmute/functions bash",
-    "docker:start": "docker run -it transmute/functions"
+    "docker:start": "docker run -v `pwd`/.transmute:/usr/src/app/functions/.transmute -it transmute/functions  "
   },
   "dependencies": {
     "cors": "^2.8.4",

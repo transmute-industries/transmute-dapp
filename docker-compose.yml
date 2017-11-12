@@ -1,29 +1,5 @@
 version: '2'
 services:
-  dapp:
-    build:
-      context: ./dapp
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    volumes:
-     - ./dapp/src:/usr/src/app/src
-    links:
-     - ipfs
-     - testrpc
-     - functions
-
-  functions:
-    build:
-      context: ./functions
-      dockerfile: Dockerfile.serve
-    ports:
-      - "3001:3001"
-    volumes:
-     - ./functions/.transmute:/usr/src/app/functions/.transmute
-    links:
-     - ipfs
-     - testrpc
 
   testrpc:
     environment:
@@ -43,3 +19,30 @@ services:
     # volumes:
     #   - ~/.ipfs/:/data/ipfs/
     
+  functions:
+    build:
+      context: ./functions
+      dockerfile: Dockerfile.serve
+    ports:
+      - "3001:3001"
+    volumes:
+     - ./functions/.transmute:/usr/src/app/functions/.transmute
+    links:
+     - ipfs
+     - testrpc
+
+  dapp:
+    build:
+      context: ./dapp
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+     - ./dapp/src:/usr/src/app/src
+    links:
+     - ipfs
+     - testrpc
+     - functions
+
+
+

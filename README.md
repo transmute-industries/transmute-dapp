@@ -32,6 +32,20 @@ $ git clone https://github.com/transmute-industries/transmute-dapp.git
 
 - Update to use your `firebase-client-config.json`
 
+
+### Theme
+
+We use react-semantic-ui and a custom theme for this demo. If you wish to personalize this dapp's theme:
+
+```
+cd semantic
+gulp watch
+```
+
+Any changes you make to semantic ui will be reflected in the dapp. 
+
+Only run this if you are working on the front-end of a dapp.
+
 ### Run the dApp!
 ```
 $ docker-compose up

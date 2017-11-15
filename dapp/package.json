@@ -89,7 +89,7 @@
   },
   "scripts": {
     "clean": "rm -rf build coverage",
-    "docker:build": "docker build -t transmute/dapp -f Dockerfile .",
+    "docker:build": "docker build -t transmute/dapp -f Dockerfile.test .",
     "docker:start": "docker run -v `pwd`/src:/usr/src/app/src -p 127.0.0.1:3000:3000 -it transmute/dapp ",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
